@@ -28,7 +28,7 @@ function openModal(modalId) {
     const adminName = document.getElementById('admin-name').value;
     const adminPassword = document.getElementById('admin-password').value;
   
-    if (adminName === 'rohith' && adminPassword === '123') {
+    if (adminName === 'sanjay' && adminPassword === 'sanjay123') {
       alert('Admin login successful!');
       document.getElementById('admin-login').classList.add('hidden');
     } else {
