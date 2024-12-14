@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donor Details</title>
+</head>
+<body>
+    <h1>Donor Details Page</h1>
+    <!-- Donor Sign-Up Details Section -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Donor Sign-Up Details</h3>
+                    <div id="donor-details">
+                        <ul class="list-disc list-inside space-y-2">
+                            <!-- Sample Donor Data -->
+                            <li><strong>Name:</strong> John Doe | <strong>Blood Group:</strong> A+<strong>| DOB:</strong>20-01-2004 | <strong>GENDER:</strong>MALE| <strong>AGE:</strong>20| <strong>| PHONE:</strong>12345678<strong>ADDRESS:</strong>UK</li>
+                            <li><strong>Name:</strong> Jane Smith | <strong>Blood Group:</strong> O-<strong>| DOB:</strong>20-01-2003 | <strong>GENDER:</strong>MALE| <strong>AGE:</strong>21| <strong>PHONE:</strong>123456789<strong>ADDRESS:</strong>USA</li>
+                            <li><strong>Name:</strong> Alice Johnson | <strong>Blood Group:</strong> B+<strong>| DOB:</strong>13-01-2004 | <strong>GENDER:</strong>FEMALE| <strong>AGE:</strong>20| <strong>PHONE:</strong>1234567890<strong>ADDRESS:</strong>UAE</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- JavaScript for Dynamic Content (if needed) -->
+    <script>
+        // Placeholder JavaScript function to populate donor details dynamically
+        function loadDonorDetails() {
+            const donors = [
+                { name: "John Doe", bloodGroup: "A+" ,dob:"20-01-2004",gender:"male",AGE: "20",PHONE:"12345678",ADDRESS:"UK"},
+                { name: "Jane Smith", bloodGroup: "O-",dob:"20-01-2003",gender:"male",AGE: "21",PHONE:"123456789",ADDRESS:"USA" },
+                { name: "Alice Johnson", bloodGroup: "B+",dob:"13-01-2004",gender:"male",AGE: "20",PHONE:"1234567890",ADDRESS:"UAE" }
+            ];
+
+            const donorContainer = document.getElementById("donor-details");
+            donorContainer.innerHTML = donors.map(donor => 
+                `<li><strong>Name:</strong> ${donor.name} | <strong>Blood Group:</strong> ${donor.bloodGroup}</li>`
+            ).join('');
+        }
+</script>
+window.onload = function() {
+    loadDonorDetails();
+};
+    <a href="admin-profile.html">Back to Admin Profile</a>
+</body>
+</html>

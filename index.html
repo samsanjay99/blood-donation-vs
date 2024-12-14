@@ -1,0 +1,329 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-roboto">
+    <div class="container mx-auto p-4">
+        <h1 class="text-4xl font-bold text-center text-red-600 mb-8">Welcome to Blood Donation Finder</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fas fa-user-shield text-6xl text-red-600 mb-4"></i>
+                <h2 class="text-2xl font-bold mb-4">Admin Login</h2>
+                <a href="#admin-login" class="bg-red-600 text-white py-2 px-4 rounded">Login</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fas fa-user text-6xl text-red-600 mb-4"></i>
+                <h2 class="text-2xl font-bold mb-4">Donor Login</h2>
+                <a href="#donor-login" class="bg-red-600 text-white py-2 px-4 rounded">Login</a>
+                <a href="#donor-signup" class="block mt-4 text-red-600">Sign Up</a>
+            
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fas fa-hospital text-6xl text-red-600 mb-4"></i>
+                <h2 class="text-2xl font-bold mb-4">Blood Bank Login</h2>
+                <a href="#bloodbank-login" class="bg-red-600 text-white py-2 px-4 rounded">Login</a>
+                <a href="#bloodbank-signup" class="block mt-4 text-red-600">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="admin-login" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-2xl font-bold mb-4">Admin Login</h2>
+            <form id="admin-login-form">
+                <div class="mb-4">
+                    <label for="admin-name" class="block text-gray-700">Admin Name</label>
+                    <input type="text" id="admin-name" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="admin-password" class="block text-gray-700">Password</label>
+                    <input type="password" id="admin-password" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        
+    
+                    <!-- Login button will lead instantly to the donor.html page -->
+                    <a href="admin-profile.html" class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Donor Login Modal -->
+    <div id="donor-login" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-2xl font-bold mb-4">Donor Login</h2>
+            <form id="donor-login-form">
+                <div class="mb-4">
+                    <label for="donor-email" class="block text-gray-700">Email</label>
+                    <input type="email" id="donor-email" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="donor-password" class="block text-gray-700">Password</label>
+                    <input type="password" id="donor-password" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        
+    
+                        <!-- Login button will lead instantly to the donor.html page -->
+                        <a href="donor.html" class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">Login</a>
+                    </div>
+                    
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- Blood Bank Login Modal -->
+    <div id="bloodbank-login" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-2xl font-bold mb-4">Blood Bank Login</h2>
+            <form id="bloodbank-login-form">
+                <div class="mb-4">
+                    <label for="bloodbank-email" class="block text-gray-700">Email</label>
+                    <input type="email" id="bloodbank-email" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="bloodbank-password" class="block text-gray-700">Password</label>
+                    <input type="password" id="bloodbank-password" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        
+    
+                    <!-- Login button will lead instantly to the donor.html page -->
+                    <a href="bloodbank-profile.html" class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Donor Sign Up Modal -->
+    <div id="donor-signup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-2xl font-bold mb-4">Donor Sign Up</h2>
+            <form id="donor-signup-form">
+                <div class="mb-4">
+                    <label for="donor-signup-name" class="block text-gray-700">Name</label>
+                    <input type="text" id="donor-signup-name" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="donor-signup-email" class="block text-gray-700">Email</label>
+                    <input type="email" id="donor-signup-email" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="donor-signup-password" class="block text-gray-700">Password</label>
+                    <input type="password" id="donor-signup-password" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="donor-signup-blood-group" class="block text-gray-700">Blood Group</label>
+                    <select id="donor-signup-blood-group" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                        <option value="">Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="donor-signup-phone" class="block text-gray-700">Phone</label>
+                    <input type="tel" id="donor-signup-phone" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="donor-signup-address" class="block text-gray-700">Address</label>
+                    <textarea id="donor-signup-address" class="w-full p-2 border border-gray-300 rounded mt-1" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Blood Bank Sign Up Modal -->
+    <div id="bloodbank-signup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-2xl font-bold mb-4">Blood Bank Sign Up</h2>
+            <form id="bloodbank-signup-form">
+                <div class="mb-4">
+                    <label for="bloodbank-name" class="block text-gray-700">Blood Bank Name</label>
+                    <input type="text" id="bloodbank-name" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="bloodbank-address" class="block text-gray-700">Address</label>
+                    <input type="text" id="bloodbank-address" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="bloodbank-contact" class="block text-gray-700">Contact Number</label>
+                    <input type="text" id="bloodbank-contact" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="bloodbank-blood-group" class="block text-gray-700">Blood Group Required</label>
+                    <input type="text" id="bloodbank-blood-group" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="bloodbank-email" class="block text-gray-700">Email ID</label>
+                    <input type="email" id="bloodbank-email" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="bloodbank-password" class="block text-gray-700">Create Password</label>
+                    <input type="password" id="bloodbank-password" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="bloodbank-confirm-password" class="block text-gray-700">Confirm Password</label>
+                    <input type="password" id="bloodbank-confirm-password" class="w-full p-2 border border-gray-300 rounded mt-1" required>
+                </div>
+                <button type="submit" class="bg-red-600 text-white py-2 px-4 rounded">Sign Up</button>
+            </form>
+        </div>
+    </div>
+  
+
+
+    <!-- Admin Page -->
+    <div id="admin-page" class="hidden">
+        <div class="container mx-auto p-4">
+            <h2 class="text-3xl font-bold mb-8">Admin Page</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Donor Sign Up Details</h3>
+                    <div id="donor-details">
+                        <!-- Donor details will be displayed here -->
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Blood Bank Requests</h3>
+                    <div id="bloodbank-requests">
+                        <!-- Blood bank requests will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
+    <script>
+        function redirectToDonorPage(event) {
+            event.preventDefault();  // Prevent form submission
+            // You can add validation here if needed
+            window.location.href = 'donor.html';  // Redirect to donor page instantly
+        }
+    </script>
+
+    <script>
+        // JavaScript to handle modal display and form submission
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('.fixed').forEach(modal => modal.classList.add('hidden'));
+                document.querySelector(this.getAttribute('href')).classList.remove('hidden');
+            });
+        });
+
+        document.querySelectorAll('.fixed').forEach(modal => {
+            modal.addEventListener('click', function (e) {
+                if (e.target === this) {
+                    this.classList.add('hidden');
+                }
+            });
+        });
+
+        document.getElementById('admin-login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const adminName = document.getElementById('admin-name').value;
+            const adminPassword = document.getElementById('admin-password').value;
+            if (adminName === 'rohith' && adminPassword === '123') {
+                document.getElementById('admin-login').classList.add('hidden');
+                document.getElementById('admin-page').classList.remove('hidden');
+            } else {
+                alert('Invalid admin credentials');
+            }
+        });
+
+        document.getElementById('donor-signup-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('donor-signup-name').value,
+                email: document.getElementById('donor-signup-email').value,
+                password: document.getElementById('donor-signup-password').value,
+                bloodGroup: document.getElementById('donor-signup-blood-group').value,
+                phone: document.getElementById('donor-signup-phone').value,
+                address: document.getElementById('donor-signup-address').value,
+                userType: 'donor'
+            };
+
+            try {
+                const response = await fetch(`${config.apiUrl}/api/signup`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    alert('Signup successful! Please login.');
+                    window.location.href = 'donor.html';
+                } else {
+                    alert(data.message || 'Error signing up');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error signing up');
+            }
+        });
+
+        document.getElementById('donor-login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = {
+                email: document.getElementById('donor-email').value,
+                password: document.getElementById('donor-password').value,
+                userType: 'donor'
+            };
+
+            try {
+                const response = await fetch(`${config.apiUrl}/api/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    window.location.href = 'donor.html';
+                } else {
+                    alert(data.message || 'Login failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error logging in');
+            }
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-8">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-4">About Us</h3>
+            <p class="mb-4">Vision: To create a platform that connects blood donors with those in need, ensuring a reliable and efficient blood donation process.</p>
+            <p class="mb-4">Mission: To save lives by making blood donation easy, accessible, and efficient for everyone.</p>
+            <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+            <p class="mb-2">Email: tnrohith6@gmail.com</p>
+            <p>Contact No: 9380687259</p>
+            <p class="mt-8"> 2024 Blood Donation Finder. All Rights Reserved By Rohith.</p>
+        </div>
+   
+    </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Bank Requests</title>
+</head>
+<body>
+    <h1>Blood Bank Requests Page</h1>
+    <!-- Blood Bank Requests Section -->
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold mb-4">Blood Bank Requests</h3>
+        <div id="bloodbank-requests">
+            <ul class="list-disc list-inside space-y-2">
+                <!-- Sample Request Data -->
+                <li><strong>Blood Group:</strong> AB+ | <strong>Hospital:</strong> City General Hospital</li>
+                <li><strong>Blood Group:</strong> O+ | <strong>Hospital:</strong> Green Valley Clinic</li>
+                <li><strong>Blood Group:</strong> B- | <strong>Hospital:</strong> Red Cross Center</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    function loadBloodBankRequests() {
+        const requests = [
+            { bloodGroup: "AB+", hospital: "City General Hospital" },
+            { bloodGroup: "O+", hospital: "Green Valley Clinic" },
+            { bloodGroup: "B-", hospital: "Red Cross Center" }
+        ];
+
+        const requestContainer = document.getElementById("bloodbank-requests");
+        requestContainer.innerHTML = requests.map(request => 
+            `<li><strong>Blood Group:</strong> ${request.bloodGroup} | <strong>Hospital:</strong> ${request.hospital}</li>`
+        ).join('');
+    }
+    window.onload = function() {
+
+        loadBloodBankRequests();
+    };
+</script>
+    <a href="admin-profile.html">Back to Admin Profile</a>
+</body>
+</html>

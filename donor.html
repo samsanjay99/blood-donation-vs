@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-roboto">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-red-600 text-white p-4">
+        <div class="container mx-auto flex justify-between">
+            <h1 class="text-2xl font-bold">Donor Page</h1>
+            <a href="index.html" class="bg-white text-red-600 py-2 px-4 rounded">Home</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-8">
+        <h2 class="text-3xl font-bold mb-6">Blood Bank Requests</h2>
+        <div id="bloodbank-requests" class="bg-white p-6 rounded-lg shadow-lg">
+            <!-- Blood bank requests will be dynamically displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Retrieve blood bank data from local storage
+        document.addEventListener('DOMContentLoaded', () => {
+            const bloodbankRequests = JSON.parse(localStorage.getItem('bloodbankRequests')) || [];
+            const requestsContainer = document.getElementById('bloodbank-requests');
+
+            if (bloodbankRequests.length > 0) {
+                bloodbankRequests.forEach(request => {
+                    const requestDiv = document.createElement('div');
+                    requestDiv.classList.add('mb-4', 'p-4', 'border', 'border-gray-200', 'rounded');
+
+                    requestDiv.innerHTML = `
+                        <p><strong>Name:</strong> ${request.name}</p>
+                        <p><strong>Address:</strong> ${request.address}</p>
+                        <p><strong>Contact:</strong> ${request.contact}</p>
+                        <p><strong>Blood Group Required:</strong> ${request.bloodGroup}</p>
+                        <p><strong>Email:</strong> ${request.email}</p>
+                    `;
+
+                    requestsContainer.appendChild(requestDiv);
+                });
+            } else {
+                requestsContainer.innerHTML = '<p class="text-gray-600">No blood bank requests available.</p>';
+            }
+        });
+    </script>
+
+</body>
+</html>
