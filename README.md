@@ -2,8 +2,8 @@
 
 A web application to connect blood donors with blood banks and manage blood donation requests.
 ## admin login 
-rohith 
-123
+sanjay
+sanjay123
 ## Deployment Instructions
 
 1. Sign up for a free account on [Render.com](https://render.com)
